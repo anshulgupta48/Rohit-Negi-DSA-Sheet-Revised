@@ -22,14 +22,15 @@ class Solution{
     void binSort(vector<int> &arr) {
         int n = arr.size();
         int start = 0;
-        int end = 0;
+        int end = n-1;
         
-        while(end < n) {
-            if(arr[end] == 0) {
-                swap(arr[start], arr[end]);
+        while(start < end) {
+            if(arr[start] == 0) {
                 start++;
+            } else {
+                swap(arr[start], arr[end]);
+                end--;
             }
-            end++;
         }
     }
 };
