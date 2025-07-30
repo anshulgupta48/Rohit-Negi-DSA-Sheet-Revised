@@ -22,6 +22,10 @@ class Solution{
         int m = b.size();
         map<int, int> freqA;
         map<int, int> freqB;
+
+        if(n != m) {
+            return false;
+        }
         
         for(int i = 0; i < n; i++) {
             freqA[a[i]]++;

@@ -39,6 +39,10 @@ class Solution{
         else {
             diff = diff2;
         }
+
+        if(diff == 0) {
+            return arr[0];
+        }
         
         while(start <= end) {
             int mid = start + (end - start) / 2;
