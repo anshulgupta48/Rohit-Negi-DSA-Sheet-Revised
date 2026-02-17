@@ -23,7 +23,7 @@ class Solution{
         
         for(int i = 1; i <= N; i++) {
             for(int j = 1; j <= N; j++) {
-                temp[i][j] = mat[i-1][j-1] + temp[i-1][j] + temp[i][j-1] -temp[i-1][j-1];
+                temp[i][j] = mat[i-1][j-1] + temp[i-1][j] + temp[i][j-1] - temp[i-1][j-1];
                 
                 if(i >= K && j >= K) {
                     int sum = temp[i][j] + temp[i-K][j-K] - temp[i-K][j] - temp[i][j-K];
