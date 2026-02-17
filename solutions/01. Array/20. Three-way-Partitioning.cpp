@@ -22,7 +22,7 @@ class Solution{
         int start = 0;
         int end = n-1;
         
-        for(int i = 0; i <= end; i++) {
+        for(int i = start; i <= end; i++) {
             if(arr[i] < a) {
                 swap(arr[i], arr[start]);
                 start++;
@@ -30,8 +30,8 @@ class Solution{
             
             if(arr[i] > b) {
                 swap(arr[i], arr[end]);
-                i--;
                 end--;
+                i--;
             }
         }
     }
