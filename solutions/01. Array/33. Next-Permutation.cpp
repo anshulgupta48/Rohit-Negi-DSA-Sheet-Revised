@@ -32,7 +32,7 @@ class Solution{
             return reverse(nums.begin(), nums.end());
         }
 
-        while(i <= j && nums[i] >= nums[j]) {
+        while(i < j && nums[i] >= nums[j]) {
             j--;
         }
 
