@@ -26,7 +26,7 @@ class Solution{
             
             while(j < k) {
                 if((arr[i]+arr[j]+arr[k]) < sum) {
-                    count += (k-j);
+                    count += (k - j);
                     j++;
                 } else {
                     k--;
