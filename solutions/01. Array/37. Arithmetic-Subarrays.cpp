@@ -16,7 +16,7 @@
 
 class Solution{
     public:
-    bool checkSubarrays(vector<int>& arr) {
+    bool checkSubarrays(vector<int> arr) {
         int n = arr.size();
         sort(arr.begin(), arr.end());
         int diff = arr[1] - arr[0];

@@ -25,7 +25,7 @@ class Solution{
         int currCapacity = capacity;
 
         for(int i = 0; i < n; i++) {
-            if(currCapacity >= plants[i]) {
+            if(plants[i] <= currCapacity) {
                 currCapacity -= plants[i];
                 count++;
             } else {
