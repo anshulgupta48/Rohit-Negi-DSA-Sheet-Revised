@@ -27,9 +27,9 @@ class Solution{
         }
         
         while(end < n) {
-            product *= arr[end];
+            product = product * arr[end];
             while(product >= k) {
-                product /= arr[start];
+                product = product / arr[start];
                 start++;
             }
             
