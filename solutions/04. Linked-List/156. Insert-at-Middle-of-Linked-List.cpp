@@ -22,7 +22,8 @@ class Solution{
         Node* nodeToInsert = new Node(x);
         
         if(head == NULL) {
-            return nodeToInsert;
+            head = nodeToInsert;
+            return head;
         }
         
         while(fastPtr->next != NULL && fastPtr->next->next != NULL) {

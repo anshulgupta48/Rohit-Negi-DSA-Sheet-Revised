@@ -20,14 +20,19 @@ class Solution{
         Node* temp = head;
         Node* nodeToInsert = new Node(key);
         
-        if(temp->data > nodeToInsert->data) {
+        if(head == NULL) {
+            head = nodeToInsert;
+            return head;
+        }
+        
+        if(temp->data > key) {
             nodeToInsert->next = temp;
             head = nodeToInsert;
             return head;
         }
         
         while(temp->next != NULL) {
-            if(temp->next->data > nodeToInsert->data) {
+            if(temp->next->data > key) {
                 nodeToInsert->next = temp->next;
                 temp->next = nodeToInsert;
                 return head;

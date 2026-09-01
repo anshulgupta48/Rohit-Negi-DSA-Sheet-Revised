@@ -22,29 +22,25 @@ class Solution{
         
         if(x == 1) {
             curr->next->prev = NULL;
-            curr = curr->next;
-            head = curr;
+            head = curr->next;
             return head;
         }
         
-        while(count < x-1) {
+        while(curr->next != NULL) {
+            if(count == x) {
+                curr->prev->next = curr->next;
+                curr->next->prev = curr->prev;
+                curr->prev = NULL;
+                curr->next = NULL;
+                return head;
+            }
+            
             count++;
             curr = curr->next;
         }
         
-        if(curr->next->next == NULL) {
-            Node* nodeToDelete = curr->next;
-            nodeToDelete->prev = NULL;
-            nodeToDelete->next = NULL;
-            curr->next = NULL;
-            return head;
-        }
-        
-        Node* nodeToDelete = curr->next;
-        nodeToDelete->prev = NULL;
-        nodeToDelete->next->prev = curr;
-        curr->next = nodeToDelete->next;
-        nodeToDelete->next = NULL;
+        curr->prev->next = NULL;
+        curr->prev = NULL;
         return head;
     }
 };

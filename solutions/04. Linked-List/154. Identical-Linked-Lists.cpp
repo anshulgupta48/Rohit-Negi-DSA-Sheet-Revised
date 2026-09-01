@@ -32,6 +32,7 @@ class Solution{
         if(temp1 != NULL || temp2 != NULL) {
             return false;
         }
+        
         return true;
     }
 };
