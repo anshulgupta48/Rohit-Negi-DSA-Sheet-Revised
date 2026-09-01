@@ -21,7 +21,8 @@ class Solution{
         Node* nodeToInsert = new Node(x);
         
         if(head == NULL) {
-            return nodeToInsert;
+            head = nodeToInsert;
+            return head;
         }
         
         while(temp->next != NULL) {
