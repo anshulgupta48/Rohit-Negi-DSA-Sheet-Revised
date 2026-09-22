@@ -10,6 +10,7 @@ solutions/
 ├── 02. String/
 ├── 03. Searching-and-Sorting/
 └── 04. Linked-List/
+└── 05. Stack/
 ```
 
 ## Solution Format
