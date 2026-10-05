@@ -11,6 +11,7 @@ solutions/
 ├── 03. Searching-and-Sorting/
 └── 04. Linked-List/
 └── 05. Stack/
+└── 06. Queue/
 ```
 
 ## Solution Format
