@@ -38,25 +38,20 @@ class myQueue {
     }
 
     bool isEmpty() {
-        if(front == NULL) {
-            return true;
-        } else {
-            return false;
-        }
+        return (front == NULL);
     }
 
     void enqueue(int x) {
-        Node* newNode = new Node(x);
+        Node* nodeToInsert = new Node(x);
+        count++;
         
         if(isEmpty()) {
-            front = newNode;
-            rear = newNode;
+            front = nodeToInsert;
+            rear = nodeToInsert;
         } else {
-            rear->next = newNode;
-            rear = newNode;
+            rear->next = nodeToInsert;
+            rear = nodeToInsert;
         }
-        
-        count++;
     }
 
     void dequeue() {
