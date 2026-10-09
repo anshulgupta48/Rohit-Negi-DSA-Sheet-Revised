@@ -19,10 +19,10 @@ class Solution {
   public:
     queue<int> reverseFirstK(queue<int> q, int k) {
         int n = q.size();
-        stack<int> st;
         queue<int> ans;
+        stack<int> st;
         
-        if(k > n) {
+        if(n < k) {
             return q;
         }
         

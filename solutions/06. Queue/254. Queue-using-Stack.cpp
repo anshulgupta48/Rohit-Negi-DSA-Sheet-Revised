@@ -19,7 +19,7 @@ class myQueue {
 
   public:
     myQueue() {
-        
+        // Initialize your data members
     }
 
     void enqueue(int x) {
