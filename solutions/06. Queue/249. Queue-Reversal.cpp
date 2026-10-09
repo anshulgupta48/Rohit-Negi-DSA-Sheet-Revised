@@ -14,8 +14,8 @@
 
 
 
-class Solution{
-    public:
+class Solution {
+  public:
     void reverseQueue(queue<int> &q) {
         stack<int> st;
         

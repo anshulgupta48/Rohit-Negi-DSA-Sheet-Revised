@@ -14,8 +14,8 @@
 
 
 
-class Solution{
-    public:
+class Solution {
+  public:
     queue<int> fillQ(const vector<int>& arr) {
         int n = arr.size();
         queue<int> q;
