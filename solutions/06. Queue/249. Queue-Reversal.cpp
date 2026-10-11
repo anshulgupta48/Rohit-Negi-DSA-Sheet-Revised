@@ -24,7 +24,7 @@ class Solution {
             q.pop();
         }
         
-        while(st.size() > 0) {
+        while(!st.empty()) {
             q.push(st.top());
             st.pop();
         }
