@@ -23,31 +23,31 @@ class Solution {
         
         while(!q.empty()) {
             int n = q.size();
-            
+    
             for(int i = 0; i < n; i++) {
                 Node* curr = q.front();
                 q.pop();
-                
+    
                 if(curr->left) {
                     q.push(curr->left);
                 }
                 if(curr->right) {
                     q.push(curr->right);
                 }
-                
+    
                 if(isKeyPresent) {
                     return curr;
                 }
                 if(curr->data == key) {
                     isKeyPresent = true;
                 }
-
+    
                 if(i == n-1 && isKeyPresent) {
                     return new Node(-1);
                 }
             }
         }
-        
+    
         return new Node(-1);
     }
 };
