@@ -32,7 +32,7 @@ class Solution {
             k--;
         }
         
-        while(st.size() > 0) {
+        while(!st.empty()) {
             ans.push(st.top());
             st.pop();
         }
