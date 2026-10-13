@@ -12,6 +12,7 @@ solutions/
 └── 04. Linked-List/
 └── 05. Stack/
 └── 06. Queue/
+└── 07. Tree/
 ```
 
 ## Solution Format
