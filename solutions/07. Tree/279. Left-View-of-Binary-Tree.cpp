@@ -23,14 +23,14 @@ class Solution {
         }
         
         if(level > maxLevel) {
-            ans.push_back(root->data);
             maxLevel = level;
+            ans.push_back(root->data);
         }
         
         getLeftView(root->left, level+1, maxLevel, ans);
         getLeftView(root->right, level+1, maxLevel, ans);
     }
-  
+
     vector<int> leftView(Node *root) {
         vector<int> ans;
         int maxLevel = 0;

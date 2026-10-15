@@ -20,7 +20,7 @@
 class Solution {
   public:
     int countNonLeafNodes(Node* root) {
-        if(root == NULL || (root->left == NULL && root->right == NULL)) {
+        if((root == NULL) || (root->left == NULL && root->right == NULL)) {
             return 0;
         }
         
