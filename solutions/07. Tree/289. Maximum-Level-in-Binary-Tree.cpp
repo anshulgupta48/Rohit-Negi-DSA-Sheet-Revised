@@ -21,9 +21,7 @@ class Solution {
             return 0;
         }
         
-        int leftHeight = maxLevel(root->left);
-        int rightHeight = maxLevel(root->right);
-        int ans = max(leftHeight, rightHeight) + 1;
+        int ans = 1 + max(maxLevel(root->left), maxLevel(root->right));
         return ans;
     }
 };

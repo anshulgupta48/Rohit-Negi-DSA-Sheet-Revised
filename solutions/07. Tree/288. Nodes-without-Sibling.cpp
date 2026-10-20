@@ -34,14 +34,15 @@ class Solution {
         checkNodes(root->left, ans);
         checkNodes(root->right, ans);
     }
-
+    
     vector<int> noSibling(Node* root) {
         vector<int> ans;
         checkNodes(root, ans);
         
-        if(ans.empty()) {
+        if(ans.size() == 0) {
             return {-1};
         }
+        
         sort(ans.begin(), ans.end());
         return ans;
     }
