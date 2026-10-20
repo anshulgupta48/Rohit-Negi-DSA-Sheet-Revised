@@ -26,28 +26,28 @@ class Solution {
         while(!st1.empty() || !st2.empty()) {
             if(!st1.empty()) {
                 while(!st1.empty()) {
-                    Node* temp = st1.top();
+                    Node* currNode = st1.top();
+                    ans.push_back(currNode->data);
                     st1.pop();
-                    ans.push_back(temp->data);
                     
-                    if(temp->left) {
-                        st2.push(temp->left);
+                    if(currNode->left) {
+                        st2.push(currNode->left);
                     }
-                    if(temp->right) {
-                        st2.push(temp->right);
+                    if(currNode->right) {
+                        st2.push(currNode->right);
                     }
                 }
             } else {
                 while(!st2.empty()) {
-                    Node* temp = st2.top();
+                    Node* currNode = st2.top();
+                    ans.push_back(currNode->data);
                     st2.pop();
-                    ans.push_back(temp->data);
                     
-                    if(temp->right) {
-                        st1.push(temp->right);
+                    if(currNode->right) {
+                        st1.push(currNode->right);
                     }
-                    if(temp->left) {
-                        st1.push(temp->left);
+                    if(currNode->left) {
+                        st1.push(currNode->left);
                     }
                 }
             }

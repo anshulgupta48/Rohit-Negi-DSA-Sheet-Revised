@@ -19,23 +19,23 @@ class Solution {
   public:
     vector<int> levelOrder(Node *root) {
         vector<int> ans;
+        queue<Node*> q;
+        q.push(root);
+        
         if(root == NULL) {
             return ans;
         }
         
-        queue<Node*> q;
-        q.push(root);
-        
         while(!q.empty()) {
-            Node* temp = q.front();
-            ans.push_back(temp->data);
+            Node* currNode = q.front();
+            ans.push_back(currNode->data);
             q.pop();
             
-            if(temp->left) {
-                q.push(temp->left);
+            if(currNode->left) {
+                q.push(currNode->left);
             }
-            if(temp->right) {
-                q.push(temp->right);
+            if(currNode->right) {
+                q.push(currNode->right);
             }
         }
         
