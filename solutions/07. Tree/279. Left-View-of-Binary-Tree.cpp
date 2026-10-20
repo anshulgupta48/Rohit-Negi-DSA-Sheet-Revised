@@ -30,7 +30,7 @@ class Solution {
         getLeftView(root->left, level+1, maxLevel, ans);
         getLeftView(root->right, level+1, maxLevel, ans);
     }
-
+    
     vector<int> leftView(Node *root) {
         vector<int> ans;
         int maxLevel = 0;
