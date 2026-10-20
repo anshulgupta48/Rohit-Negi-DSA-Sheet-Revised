@@ -25,7 +25,7 @@ class Solution {
         checkNodes(root->left, ans);
         checkNodes(root->right, ans);
     }
-
+    
     vector<int> preOrder(Node* root) {
         vector<int> ans;
         checkNodes(root, ans);

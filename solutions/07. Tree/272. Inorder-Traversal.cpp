@@ -26,7 +26,7 @@ class Solution {
         ans.push_back(root->data);
         checkNodes(root->right, ans);
     }
-
+    
     vector<int> inOrder(Node* root) {
         vector<int> ans;
         checkNodes(root, ans);
