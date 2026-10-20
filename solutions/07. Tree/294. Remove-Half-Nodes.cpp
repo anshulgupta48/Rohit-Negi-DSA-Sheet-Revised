@@ -31,13 +31,11 @@ class Solution {
         if(root->left && !root->right) {
             Node* ans = root->left;
             root->left = NULL;
-            delete root;
             return ans;
         }
         if(!root->left && root->right) {
             Node* ans = root->right;
             root->right = NULL;
-            delete root;
             return ans;
         }
     }
