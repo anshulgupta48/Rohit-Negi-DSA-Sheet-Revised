@@ -17,22 +17,20 @@
 
 class Solution {
   public:
-    int height(Node* root) {
+    int getHeight(Node* root) {
         if(root == NULL) {
-            return -1;
+            return 0;
         }
         
-        int leftHeight = height(root->left);
-        int rightHeight = height(root->right);
-        int ans = 1 + max(leftHeight, rightHeight);
+        int ans = 1 + max(getHeight(root->left), getHeight(root->right));
         return ans;
     }
-
+    
     bool isBalanced(Node* root) {
         if(root == NULL) {
             return true;
         }
-        else if(abs(height(root->left)-height(root->right)) > 1) {
+        else if(abs(getHeight(root->left)-getHeight(root->right)) > 1) {
             return false;
         }
         

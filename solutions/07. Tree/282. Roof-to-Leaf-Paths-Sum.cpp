@@ -26,11 +26,11 @@ class Solution {
             ans = ans + num;
             return;
         }
-
+        
         findSum(root->left, ans, num*10);
         findSum(root->right, ans, num*10);
     }
-
+    
     int treePathsSum(Node *root) {
         int ans = 0;
         int num = 0;

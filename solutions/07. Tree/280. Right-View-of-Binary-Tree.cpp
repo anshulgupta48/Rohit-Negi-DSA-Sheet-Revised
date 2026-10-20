@@ -32,7 +32,7 @@ class Solution {
         getRightView(root->right, level+1, maxLevel, ans);
         getRightView(root->left, level+1, maxLevel, ans);
     }
-
+    
     vector<int> rightView(Node *root) {
         vector<int> ans;
         int maxLevel = 0;
