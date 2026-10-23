@@ -33,7 +33,7 @@ class Solution {
             root->left = NULL;
             return ans;
         }
-        if(!root->left && root->right) {
+        else if(!root->left && root->right) {
             Node* ans = root->right;
             root->right = NULL;
             return ans;

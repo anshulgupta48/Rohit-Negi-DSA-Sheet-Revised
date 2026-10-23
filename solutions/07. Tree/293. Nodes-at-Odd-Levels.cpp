@@ -17,14 +17,14 @@
 class Solution {
   public:
     vector<int> nodesAtOddLevels(Node *root) {
-        if(root == NULL) {
-            return {};
-        }
-        
         vector<int> ans;
         queue<Node*> q;
         q.push(root);
         int level = 1;
+        
+        if(root == NULL) {
+            return ans;
+        }
         
         while(!q.empty()) {
             int n = q.size();

@@ -42,6 +42,7 @@ class Solution {
                     q.push(currNode->right);
                 }
             }
+            
             checkSize = checkSize * 2;
         }
         
