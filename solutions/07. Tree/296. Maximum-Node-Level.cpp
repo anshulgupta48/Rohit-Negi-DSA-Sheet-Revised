@@ -17,15 +17,15 @@
 class Solution {
   public:
     int maxNodeLevel(Node *root) {
-        if(root == NULL) {
-            return 0;
-        }
-        
         int ans = 0;
         int count = -1;
         int maxSize = 0;
         queue<Node*> q;
         q.push(root);
+        
+        if(root == NULL) {
+            return ans;
+        }
         
         while(!q.empty()) {
             int size = q.size();
