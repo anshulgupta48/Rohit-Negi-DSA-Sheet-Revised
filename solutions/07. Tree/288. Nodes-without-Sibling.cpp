@@ -20,27 +20,32 @@
 
 class Solution {
   public:
-    void checkNodes(Node* root, vector<int> &ans) {
-        if(root == NULL) {
-            return;
-        }
-        else if(root->left != NULL && root->right == NULL) {
-            ans.push_back(root->left->data);
-        }
-        else if(root->left == NULL && root->right != NULL) {
-            ans.push_back(root->right->data);
-        }
-        
-        checkNodes(root->left, ans);
-        checkNodes(root->right, ans);
-    }
-    
     vector<int> noSibling(Node* root) {
         vector<int> ans;
-        checkNodes(root, ans);
+        queue<Node*> q;
+        q.push(root);
+        
+        while(!q.empty()) {
+            Node* currNode = q.front();
+            q.pop();
+            
+            if(currNode->left != NULL && currNode->right == NULL) {
+                ans.push_back(currNode->left->data);
+            }
+            else if(currNode->left == NULL && currNode->right != NULL) {
+                ans.push_back(currNode->right->data);
+            }
+            
+            if(currNode->left) {
+                q.push(currNode->left);
+            }
+            if(currNode->right) {
+                q.push(currNode->right);
+            }
+        }
         
         if(ans.size() == 0) {
-            return {-1};
+            ans.push_back(-1);
         }
         
         sort(ans.begin(), ans.end());
