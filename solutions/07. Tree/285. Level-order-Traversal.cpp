@@ -22,10 +22,6 @@ class Solution {
         queue<Node*> q;
         q.push(root);
         
-        if(root == NULL) {
-            return ans;
-        }
-        
         while(!q.empty()) {
             Node* currNode = q.front();
             ans.push_back(currNode->data);
