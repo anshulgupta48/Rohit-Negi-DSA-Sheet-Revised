@@ -45,7 +45,7 @@ class Solution {
         }
         
         if(ans.size() == 0) {
-            ans.push_back(-1);
+            return {-1};
         }
         
         sort(ans.begin(), ans.end());
