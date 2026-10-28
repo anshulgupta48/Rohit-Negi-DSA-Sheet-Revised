@@ -23,10 +23,6 @@ class Solution {
         queue<Node*> q;
         q.push(root);
         
-        if(root == NULL) {
-            return ans;
-        }
-        
         while(!q.empty()) {
             int size = q.size();
             count++;

@@ -17,10 +17,6 @@
 class Solution {
   public:
     Node* deleteNode(Node* root, int key) {
-        if(root == NULL) {
-            return root;
-        }
-        
         Node* keyNode = NULL;
         Node* lastNode = NULL;
         Node* parentOfLastNode = NULL;
