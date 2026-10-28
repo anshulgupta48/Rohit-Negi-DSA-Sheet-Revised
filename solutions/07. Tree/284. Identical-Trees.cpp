@@ -21,7 +21,7 @@ class Solution {
         if(r1 == NULL && r2 == NULL) {
             return true;
         }
-        else if((r1 == NULL && r2 != NULL) || (r1 != NULL && r2 == NULL)) {
+        else if((r1 != NULL && r2 == NULL) || (r1 == NULL && r2 != NULL)) {
             return false;
         }
         else if(r1->data != r2->data) {
