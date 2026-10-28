@@ -30,7 +30,7 @@ class Solution {
         if(root == NULL) {
             return true;
         }
-        else if(abs(getHeight(root->left)-getHeight(root->right)) > 1) {
+        else if(abs(getHeight(root->left) - getHeight(root->right)) > 1) {
             return false;
         }
         
