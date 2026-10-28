@@ -22,10 +22,6 @@ class Solution {
         q.push(root);
         int level = 1;
         
-        if(root == NULL) {
-            return ans;
-        }
-        
         while(!q.empty()) {
             int n = q.size();
             

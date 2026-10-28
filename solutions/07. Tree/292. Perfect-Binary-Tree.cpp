@@ -17,13 +17,9 @@
 class Solution {
   public:
     bool isPerfect(Node *root) {
-        if(root == NULL) {
-            return true;
-        }
-        
+        int checkSize = 1;
         queue<Node*> q;
         q.push(root);
-        int checkSize = 1;
         
         while(!q.empty()) {
             int size = q.size();
