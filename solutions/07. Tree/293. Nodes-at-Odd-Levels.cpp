@@ -18,9 +18,9 @@ class Solution {
   public:
     vector<int> nodesAtOddLevels(Node *root) {
         vector<int> ans;
+        int level = 1;
         queue<Node*> q;
         q.push(root);
-        int level = 1;
         
         while(!q.empty()) {
             int n = q.size();
