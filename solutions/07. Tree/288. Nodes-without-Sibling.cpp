@@ -32,7 +32,7 @@ class Solution {
             if(currNode->left != NULL && currNode->right == NULL) {
                 ans.push_back(currNode->left->data);
             }
-            else if(currNode->left == NULL && currNode->right != NULL) {
+            if(currNode->left == NULL && currNode->right != NULL) {
                 ans.push_back(currNode->right->data);
             }
             
