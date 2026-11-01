@@ -19,8 +19,8 @@ TreeNode* Solution::flatten(TreeNode* A) {
         return NULL;
     }
     
-    TreeNode* leftNode = flatten(A->left);
-    TreeNode* rightNode = flatten(A->right);
+    A->left = flatten(A->left);
+    A->right = flatten(A->right);
     TreeNode* temp = A->right;
     A->right = A->left;
     A->left = NULL;
