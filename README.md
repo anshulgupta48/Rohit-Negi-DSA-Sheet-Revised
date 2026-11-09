@@ -13,6 +13,7 @@ solutions/
 └── 05. Stack/
 └── 06. Queue/
 └── 07. Tree/
+└── 08. Binary-Search-Tree/
 ```
 
 ## Solution Format
