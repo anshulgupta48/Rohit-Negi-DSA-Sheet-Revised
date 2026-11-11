@@ -29,12 +29,12 @@ class Solution {
     int findMedian(Node* root) {
         vector<int> ans;
         checkNodes(root, ans);
-        int n = ans.size();
+        int size = ans.size();
         
-        if(n%2 == 0) {
-            return ans[n/2-1];
+        if(size%2 == 0) {
+            return ans[size/2-1];
         } else {
-            return ans[n/2];
+            return ans[size/2];
         }
     }
 };
