@@ -16,7 +16,7 @@
 
 class Solution {
   public:
-    bool checkNodes(Node* root, int minElement, int maxElement) {
+    bool checkBST(Node* root, int minElement, int maxElement) {
         if(root == NULL) {
             return true;
         }
@@ -24,11 +24,12 @@ class Solution {
             return false;
         }
         
-        bool ans = checkNodes(root->left, minElement, root->data) && checkNodes(root->right, root->data, maxElement);
+        bool ans = checkBST(root->left, minElement, root->data) && checkBST(root->right, root->data, maxElement);
         return ans;
     }
     
     bool isBST(Node* root) {
-        return checkNodes(root, INT_MIN, INT_MAX);
+        bool ans = checkBST(root, INT_MIN, INT_MAX);
+        return ans;
     }
 };
