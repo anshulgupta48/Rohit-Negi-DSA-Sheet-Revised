@@ -16,19 +16,23 @@
 
 class Solution {
   public:
-    bool checkBST(Node* root, int minElement, int maxElement) {
+    bool checkBST(Node* root, int minValue, int maxValue) {
         if(root == NULL) {
             return true;
         }
-        else if(root->data <= minElement || root->data >= maxElement) {
+        else if(root->data <= minValue || root->data >= maxValue) {
             return false;
         }
         
-        bool ans = checkBST(root->left, minElement, root->data) && checkBST(root->right, root->data, maxElement);
+        bool ans = checkBST(root->left, minValue, root->data) && checkBST(root->right, root->data, maxValue);
         return ans;
     }
     
     bool isBST(Node* root) {
+        if(root == NULL) {
+            return true;
+        }
+        
         bool ans = checkBST(root, INT_MIN, INT_MAX);
         return ans;
     }

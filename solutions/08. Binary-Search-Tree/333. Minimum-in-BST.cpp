@@ -25,6 +25,6 @@ class Solution {
             root = root->left;
         }
         
-        return root->data;
+        return (root->data);
     }
 };

@@ -20,13 +20,14 @@ class Solution {
         if(root == NULL) {
             return false;
         }
-        else if(root->data == key) {
+        
+        if(root->data == key) {
             return true;
         }
-        
-        if(root->data < key) {
+        else if(root->data < key) {
             search(root->right, key);
-        } else {
+        }
+        else {
             search(root->left, key);
         }
     }
