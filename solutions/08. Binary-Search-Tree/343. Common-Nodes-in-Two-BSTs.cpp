@@ -16,14 +16,14 @@
 
 class Solution {
   public:
-    void checkNodes(Node* root, vector<int> &ans) {
+    void checkNodes(Node* root, vector<int> &arr) {
         if(root == NULL) {
             return;
         }
         
-        checkNodes(root->left, ans);
-        ans.push_back(root->data);
-        checkNodes(root->right, ans);
+        checkNodes(root->left, arr);
+        arr.push_back(root->data);
+        checkNodes(root->right, arr);
     }
     
     vector<int> findCommon(Node* r1, Node* r2) {

@@ -25,6 +25,5 @@ void checkNodes(TreeNode* root, vector<int> &ans) {
 int Solution::kthsmallest(TreeNode* A, int B) {
     vector<int> ans;
     checkNodes(A, ans);
-    sort(ans.begin(), ans.end());
     return ans[B-1];
 }
