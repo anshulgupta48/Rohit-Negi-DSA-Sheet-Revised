@@ -16,21 +16,25 @@
 
 class Solution {
   public:
-    bool findDeadEnd(Node *root, int minElement, int maxElement) {
+    bool checkDeadEnd(Node *root, int minValue, int maxValue) {
         if(root == NULL) {
             return false;
         }
-        
-        if((root->data-minElement == 1) && (maxElement-root->data == 1)) {
+        else if((root->data-minValue == 1) && (maxValue-root->data == 1)) {
             return true;
         }
         
-        bool leftDeadEnd = findDeadEnd(root->left, minElement, root->data);
-        bool rightDeadEnd = findDeadEnd(root->right, root->data, maxElement);;
-        return (leftDeadEnd | rightDeadEnd);
+        bool leftDeadEnd = checkDeadEnd(root->left, minValue, root->data);
+        bool rightDeadEnd = checkDeadEnd(root->left, root->data, maxValue);
+        return (leftDeadEnd || rightDeadEnd);
     }
     
     bool isDeadEnd(Node *root) {
-        return findDeadEnd(root, 0, 100001);
+        if(root == NULL) {
+            return true;
+        }
+        
+        bool ans = checkDeadEnd(root, 0, 100001);
+        return ans;
     }
 };
